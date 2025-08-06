@@ -1,0 +1,105 @@
+/* — Base Reset — */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* — Body & Layout — */
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: linear-gradient(135deg, #e0e7ff, #f0fdfa);
+  color: #1f2937;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* — Header — */
+header {
+  margin-bottom: 30px;
+}
+header h1 {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  color: #334155;
+}
+
+/* — Navigation Menu — */
+nav .menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 40px;
+  list-style: none;
+  padding: 0;
+}
+
+nav .menu li {
+  position: relative;
+}
+
+nav .button {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  padding: 15px 10px;
+  background: #6366f1;
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  transition: transform 150ms ease, box-shadow 150ms ease, background 200ms ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+nav .button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  background: #4f46e5;
+}
+
+nav .button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.6);
+}
+
+/* — Ripple effect span — */
+nav .button .ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  transform: scale(0);
+  animation: ripple 600ms linear;
+  pointer-events: none;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* — Main overview section — */
+main .overview {
+  max-width: 600px;
+  text-align: center;
+}
+
+main .overview h2 {
+  font-size: 1.75rem;
+  margin-bottom: 10px;
+  color: #1e293b;
+}
+
+main .overview p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #475569;
+}
